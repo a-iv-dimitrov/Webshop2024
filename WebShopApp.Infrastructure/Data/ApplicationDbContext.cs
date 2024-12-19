@@ -4,7 +4,7 @@ using WebShopApp.Infrastructure.Data.Domain;
 
 namespace WebShopApp.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
