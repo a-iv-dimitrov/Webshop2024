@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebShopApp.Data;
 using WebShopApp.Infrastructure.Data.Domain;
+using WebShopApp.Infrastructure.Infrastructure;
 
 namespace WebShopApp
 {
@@ -25,11 +26,12 @@ namespace WebShopApp
                 options.Password.RequiredLength = 5;
                 options.Password.RequireNonAlphanumeric = false;
             })
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
-
+            app.PrepareDatabase();
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
