@@ -38,7 +38,6 @@ namespace WebShopApp.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [EmailAddress]
             public string UserName { get; set; }
 
             [Required]
