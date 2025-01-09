@@ -2,7 +2,7 @@
 
 namespace WebShopApp.Models.Product
 {
-    public class ProductDetailVM
+    public class ProductDetailsVM
     {
         [Key]
         public int Id { get; set; }
