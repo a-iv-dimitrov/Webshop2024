@@ -67,7 +67,7 @@ namespace WebShopApp.Controllers
                 Discount = item.Discount
             };
 
-            return View();
+            return View(product);
         }
 
         // GET: ProductController/Create
